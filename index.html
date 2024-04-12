@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>myLibrary</title>
+    <link rel="stylesheet" href="style.css">
+  </head>
+  <body>
+    <dialog>
+      <form  action="/" method="post">
+        <section class="button_row">
+          <button id="close" type="button">Close</button>
+          <button id="submit" type="submit">Submit</button>
+        </section>
+
+        <section class="new_book_form">
+
+          <section class="form_row">
+            <label for="book_title">Title:<input type="text" name="book_title" id="title" required></label>
+          </section>
+
+          <section class="form_row">
+            <label for="book_author">Author:<input type="text" name="author" id="author"></label>
+          </section>
+
+          <section class="form_row">
+            <label for="book_title">Pages:<input type="number" name="pages" id="pages"></label>
+          </section>
+
+        </section>
+      </form>
+    </dialog>
+    <button>New book</button>
+    <div class="container">
+    </div>
+    <script src="./index.js"></script>
+  </body>
+</html>
