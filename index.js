@@ -6,19 +6,41 @@ const submitBTN = document.querySelector("#submit");
 var myLibrary = [];
 var bookId = 0;
 
-function Books(title, author, pages, read) {
-    this.title = title;
-    this.author = author;
-    this.pages = pages;
-    this.read = read === "yes";
-    this.hasRead = function() {
-        this.read = !this.read;
-    };
+class Books{
+    title;
+    author;
+    pages;
+    read; 
 
-    this.info = function() {
+    constructor(title, author, pages, read){
+        this.title = title;
+        this.author = author;
+        this.pages = pages;
+        this.read = read === "yes";
+    }
+
+    hasRead () {
+        this.read = !this.read;
+    }
+
+    info () {
         return `The ${this.title} by ${this.author} had ${this.pages} pages.`;
-    };
+    }
 }
+
+// function Books(title, author, pages, read) {
+//     this.title = title;
+//     this.author = author;
+//     this.pages = pages;
+//     this.read = read === "yes";
+//     this.hasRead = function() {
+//         this.read = !this.read;
+//     };
+
+//     this.info = function() {
+//         return `The ${this.title} by ${this.author} had ${this.pages} pages.`;
+//     };
+// }
 
 const Hoops = new Books("Hoops", "Unknown", "429", "yes");
 
